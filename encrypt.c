@@ -29,9 +29,9 @@ int main(int argc, char **argv) {
     }
 
     /* encrypt */
+    srandom(pw_seed);
     long int buff = 0;
     while (fread(&buff, sizeof(long int), 1, stdin)) {
-        srandom(pw_seed);
         buff = buff ^ random();
         fwrite(&buff, sizeof(long int), 1, stdout);
     }
