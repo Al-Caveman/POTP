@@ -23,9 +23,9 @@ known issues:
 
 known fixes:
     - replace random(3) by a better one with more entropy.
-    - add iv to the implementation. of, if lazy, simply append it to
-      your password. but if you append it to your password then you'll
-      have to do your own house keeping which sucks.
+    - add perl-file iv to the implementation. if lazy, simply append
+      it to your password. but if you append it to your password then
+      you'll have to do your own house keeping which sucks.
 
 why this?
     was sort of bored.
