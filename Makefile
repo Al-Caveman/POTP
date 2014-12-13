@@ -1,4 +1,3 @@
-CC = clang
 all: Makefile encrypt
 
 encrypt: Makefile encrypt.c
