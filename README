@@ -15,12 +15,11 @@ the example files are:
         `cat file.txt.enc | ./encrypt password > file.txt.enc.txt`
 
 known issues:
-    - random(3) is not cryptographically secure. replace it
-      by a cryptographically secure alternative.
+    - random(3) is not cryptographically secure.
 
     - the tool does not automatically generate an initialization
-      vector (iv) which is silly. it's simple to add but i didn't
-      cause this wasn't worth more than 10 minutes of coding.
+      vector (iv) which is silly. it's simple to add such iv but i
+      didn't cause this wasn't worth more than 10 minutes of coding.
 
 known fixes:
     - replace random(3) by a better one with more entropy.
