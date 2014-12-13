@@ -30,8 +30,7 @@ int main(int argc, char **argv) {
 
     /* encrypt */
     long int buff = 0;
-    size_t n;
-    while ((n = fread(&buff, sizeof(long int), 1, stdin))) {
+    while (fread(&buff, sizeof(long int), 1, stdin)) {
         srandom(pw_seed);
         buff = buff ^ random();
         fwrite(&buff, sizeof(long int), 1, stdout);
