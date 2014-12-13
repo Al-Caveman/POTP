@@ -34,6 +34,7 @@ int main(int argc, char **argv) {
     while (fread(&buff, sizeof(long int), 1, stdin)) {
         buff = buff ^ random();
         fwrite(&buff, sizeof(long int), 1, stdout);
+        buff = 0;
     }
 
     return SUCESS;
