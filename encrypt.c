@@ -30,10 +30,10 @@ int main(int argc, char **argv) {
 
     /* encrypt */
     srandom(pw_seed);
-    long int buff = 0;
-    while (fread(&buff, sizeof(long int), 1, stdin)) {
+    unsigned char buff = 0;
+    while (fread(&buff, sizeof(unsigned char), 1, stdin)) {
         buff = buff ^ random();
-        fwrite(&buff, sizeof(long int), 1, stdout);
+        fwrite(&buff, sizeof(unsigned char), 1, stdout);
         buff = 0;
     }
 
