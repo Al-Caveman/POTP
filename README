@@ -16,7 +16,7 @@ the example files are:
 
 known issues:
     - random(3) is not cryptographically secure. replace it
-      by a cryptographically secure.
+      by a cryptographically secure alternative.
 
     - the tool does not automatically generate an initialization
       vector (iv) which is silly. it's simple to add but i didn't
