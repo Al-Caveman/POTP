@@ -1,0 +1,32 @@
+just do 'make' to have stuff done.
+
+then execute the output binary to cli help. it's simple, both encrypt and
+decrypt are done by the same binary.
+
+the example files are:
+    - file.txt: plain text
+
+    - file.txt.enc: same but encrypted with password 'password' as
+      follows:
+        `cat file.txt | ./encrypt password > file.txt.enc`
+
+    - file.txt.enc.txt: same but decrypted with password 'password' as
+      follows:
+        `cat file.txt.enc | ./encrypt password > file.txt.enc.txt`
+
+known issues:
+    - random(3) is not cryptographically secure. replace it
+      by a cryptographically secure.
+
+    - the tool does not automatically generate an initialization
+      vector (iv) which is silly. it's simple to add but i didn't
+      cause this wasn't worth more than 10 minutes of coding.
+
+known fixes:
+    - replace random(3) by a better one with more entropy.
+    - add iv to the implementation. of, if lazy, simply append it to
+      your password. but if you append it to your password then you'll
+      have to do your own house keeping which sucks.
+
+why this?
+    was sort of bored.
