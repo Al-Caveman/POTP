@@ -6,13 +6,13 @@ decrypt are done by the same binary.
 the example files are:
     - file.txt: plain text
 
-    - file.txt.enc: same but encrypted with password 'password' as
+    - file.txt.enc: same but encrypted with password 'pass' as
       follows:
-        `cat file.txt | ./encrypt password > file.txt.enc`
+        `cat file.txt | ./encrypt pass > file.txt.enc`
 
-    - file.txt.enc.txt: same but decrypted with password 'password' as
+    - file.txt.enc.txt: same but decrypted with password 'pass' as
       follows:
-        `cat file.txt.enc | ./encrypt password > file.txt.enc.txt`
+        `cat file.txt.enc | ./encrypt pass > file.txt.enc.txt`
 
 known issues:
     - random(3) is not cryptographically secure.
