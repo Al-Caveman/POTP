@@ -21,9 +21,6 @@ known issues:
       vector (iv) which is silly. it's simple to add such iv but i
       didn't cause this wasn't worth more than 10 minutes of coding.
 
-    - somehow the last few bytes/chars are not encrypted. i don't know
-      where's the bug right now.
-
 known fixes:
     - replace random(3) by a better one with more entropy.
 
